@@ -1,0 +1,21 @@
+<body>
+
+  <h1>Editing Book</h1>
+  <%= form_for(@review) do |f| %>
+    <p class="normal">Title</p>
+    <%= f.text_field :title, class: "book_title" %>
+    <p class ="normal">Body</p>
+    <%= f.text_area :body, class: "book_body" %>
+    <div class="create">
+      <%= f.submit "Update Book" %>
+    </div>
+  <% end %>
+
+  <div class="idou">
+    <p> <%= link_to "Show", review_path(@review.id), class: "show_[:id]" %>
+        <span>|</span>
+        <%= link_to "Back", reviews_path, class: "back" %>
+    <p>
+  </div>
+
+</body>

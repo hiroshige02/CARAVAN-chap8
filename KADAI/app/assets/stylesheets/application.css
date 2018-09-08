@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    color: #444444;
+    font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+body {
+	margin: 30px;
+}
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 20px;
+}
+.intro {
+	line-height: 50px;
+	vertical-align: center;
+}
+.top {
+	padding-top
+}
+#shift {
+	padding-left: 40px;
+	margin-top: 10px;
+}
+.normal {
+	font-size: 13px;
+	padding-top: 10px;
+}
+th {
+    font-size: 15px;
+	padding: 0 5px 5px 0;
+}
+td {
+	font-size: 13px;
+	padding: 0 5px;
+}
+.new {
+	float: left;
+	margin-top: 20px;
+}
+.create {
+    display: block;
+    margin-top: 5px;
+}
+.link {
+	width: 45px;
+	text-align: center;
+}
+.notice {
+	color: rgb(137, 190, 151);
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.show {
+	margin: 0 0 30px 20px;
+	font-size: 15px;
+}
+.idou {
+	margin-top: 10px;
+}
+.column {
+	margin-bottom: 30px
