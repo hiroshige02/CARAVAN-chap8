@@ -1,0 +1,16 @@
+<body>
+
+ <p class="notice">
+   <%= notice %>
+ </p>
+
+ <p class="show"><strong>Title:</strong> <%= @review.title %></p>
+ <p class="show"><strong>Body:</strong> <%= @review.body %></p>
+
+ <p>
+   <%= link_to "Edit", edit_review_path, class: "edit_[:id]" %>
+   <span>|</span>
+   <%= link_to "Back", reviews_path, class: "back" %>
+ <p/>
+
+</body>
