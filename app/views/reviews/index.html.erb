@@ -1,0 +1,39 @@
+<body>
+
+  <h1>Books</h1>
+  <table class="clearfix">
+    <tr class="column">
+      <th>Title</th>
+      <th>Body</th>
+      <th></th>
+    </tr>
+
+    <% @reviews.each do |review| %>
+        <tr>
+        <td> <%= review.title %> </td>
+        <td> <%= review.body %> </td>
+        <td class="link"> <%= link_to "Show", review_path(review.id), class: "show_[:id]" %> </td>
+
+        <td class="link"> <%= link_to "Edit", edit_review_path(review.id), class: "edit_[:id]" %> </td>
+
+        <td class="link"> <%= link_to "Destroy", review_path(review.id), class: "destroy_[:id]", method: :delete, "data-confirm" => "Are you sure？" %> </td>
+　　   </tr>
+    <% end %>
+
+  </table>
+
+  <div class="new">
+    <h2>New book</h2>
+    <%= form_for(@review) do |f| %>
+      <p class="normal">Title</p>
+      <%= f.text_field :title, class: "book_title" %>
+      <p class="normal">Body</p>
+      <%= f.text_area :body, class: "book_body" %>
+
+      <div class="create">
+      	<%= f.submit "Create Book" %>
+      </div>
+    <% end %>
+  </div>
+
+</body>
