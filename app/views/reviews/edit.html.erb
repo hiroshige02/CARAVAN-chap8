@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="idou">
-    <p> <%= link_to "Show", review_path(@review.id), class: "show_[:id]" %>
+    <p> <%= link_to "Show", review_path(@review.id), class: "show_#{@review.id}" %>
         <span>|</span>
         <%= link_to "Back", reviews_path, class: "back" %>
     <p>

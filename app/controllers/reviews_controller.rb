@@ -2,7 +2,6 @@ class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
     @review = Review.new
-    id = params[:id]
   end
 
   def show
@@ -28,7 +27,7 @@ class ReviewsController < ApplicationController
   def create
   	review = Review.new(review_params)
   	if review.save
-      redirect_to review_path(review.id), notice: "Book was successfully created."
+      redirect_to review_path (review.id), notice: "Book was successfully created."
     else
       render action: :show
     end
