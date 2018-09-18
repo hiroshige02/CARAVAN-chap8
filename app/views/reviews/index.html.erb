@@ -12,11 +12,11 @@
         <tr>
         <td> <%= review.title %> </td>
         <td> <%= review.body %> </td>
-        <td class="link"> <%= link_to "Show", review_path(review.id), class: "show_[:id]" %> </td>
+        <td class="link"> <%= link_to "Show", review_path(review.id), class: "show_#{review.id}" %> </td>
 
-        <td class="link"> <%= link_to "Edit", edit_review_path(review.id), class: "edit_[:id]" %> </td>
+        <td class="link"> <%= link_to "Edit", edit_review_path(review.id), class: "edit_#{review.id}" %> </td>
 
-        <td class="link"> <%= link_to "Destroy", review_path(review.id), class: "destroy_[:id]", method: :delete, "data-confirm" => "Are you sure？" %> </td>
+        <td class="link"> <%= link_to "Destroy", review_path(review.id), class: "destroy_#{review.id}", method: :delete, "data-confirm" => "Are you sure？" %> </td>
 　　   </tr>
     <% end %>
 
