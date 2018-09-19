@@ -8,9 +8,9 @@
  <p class="show"><strong>Body:</strong> <%= @review.body %></p>
 
  <p>
-   <%= link_to "Edit", edit_review_path, class: "edit_[:id]" %>
+   <%= link_to "Edit", edit_review_path, class: "edit_#{@review.id}" %>
    <span>|</span>
-   <%= link_to "Back", reviews_path, class: "back" %>
+   <%= link_to "Back", reviews_path, class:"back" %>
  <p/>
 
 </body>

@@ -2,7 +2,6 @@ class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
     @review = Review.new
-    id = params[:id]
   end
 
   def show
@@ -14,9 +13,12 @@ class ReviewsController < ApplicationController
   end
 
   def update
-   	review = Review.find(params[:id])
-    review.update(review_params)
-    redirect_to review_path(review.id)
+   	@review = Review.find(params[:id])
+    if @review.update(review_params)
+      redirect_to review_path(@review.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -26,11 +28,12 @@ class ReviewsController < ApplicationController
   end
 
   def create
-  	review = Review.new(review_params)
-  	if review.save
-      redirect_to review_path(review.id), notice: "Book was successfully created."
+  	@review = Review.new(review_params)
+  	if @review.save
+      redirect_to review_path(@review.id), notice: "Book was successfully created."
     else
-      render action: :show
+      @reviews = Review.all
+      render :index
     end
   end
 
