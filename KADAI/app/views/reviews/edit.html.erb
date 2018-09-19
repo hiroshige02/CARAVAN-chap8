@@ -1,6 +1,17 @@
 <body>
 
   <h1>Editing Book</h1>
+
+  <%= form_for(@review) do |f| %>
+    <% if @review.errors.any? %>
+      <div class="error">
+        <% @review.errors.full_messages.each do |message| %>
+          <p><%= message %></p>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+
   <%= form_for(@review) do |f| %>
     <p class="normal">Title</p>
     <%= f.text_field :title, class: "book_title" %>
@@ -12,7 +23,7 @@
   <% end %>
 
   <div class="idou">
-    <p> <%= link_to "Show", review_path(@review.id), class: "show_[:id]" %>
+    <p> <%= link_to "Show", review_path(@review.id), class: "show_#{@review.id}" %>
         <span>|</span>
         <%= link_to "Back", reviews_path, class: "back" %>
     <p>
