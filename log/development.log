@@ -10754,3 +10754,580 @@ Processing by ReviewsController#show as HTML
 Completed 200 OK in 111ms (Views: 85.7ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for 10.0.2.2 at 2018-09-19 12:52:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReviewsController#top as HTML
+  Rendering reviews/top.html.erb within layouts/application
+  Rendered reviews/top.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1223ms (Views: 1204.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 10.0.2.2 at 2018-09-19 12:52:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:11
+  Rendered reviews/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 145ms (Views: 98.9ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 12:53:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j11+npCtZ2PyTeovzpznj0Nz6rKS1oaJNmqdXeTEt2DgUETSkUQ3sX7Vr+zyCLvd/Q2pDWhTvdRQjjuwK0/Mag==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:29
+  [1m[36mReview Create (4.2ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2018-09-19 12:53:04.893473"], ["updated_at", "2018-09-19 12:53:04.893473"]]
+  ↳ app/controllers/reviews_controller.rb:29
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:29
+Redirected to http://localhost:3000/reviews/24?notice=Book+was+successfully+created.
+Completed 302 Found in 15ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/reviews/24?notice=Book+was+successfully+created." for 10.0.2.2 at 2018-09-19 12:53:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"notice"=>"Book was successfully created.", "id"=>"24"}
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:8
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered reviews/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 102ms (Views: 84.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reviews/24/edit" for 10.0.2.2 at 2018-09-19 12:53:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:12
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 103ms (Views: 87.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reviews" for 10.0.2.2 at 2018-09-19 12:53:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:11
+  Rendered reviews/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 107ms (Views: 85.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/reviews/" for 10.0.2.2 at 2018-09-19 13:05:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:11
+  Rendered reviews/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 481ms (Views: 445.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/reviews/14" for 10.0.2.2 at 2018-09-19 13:06:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mReview Load (1.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:8
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered reviews/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 113ms (Views: 89.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/reviews/" for 10.0.2.2 at 2018-09-19 13:26:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/vagrant/KADAI/app/controllers/reviews_controller.rb:20: syntax error, unexpected ':', expecting keyword_end
+      render: edit
+            ^
+/vagrant/KADAI/app/controllers/reviews_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/reviews_controller.rb:20: syntax error, unexpected ':', expecting keyword_end
+app/controllers/reviews_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/reviews/" for 10.0.2.2 at 2018-09-19 13:26:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/vagrant/KADAI/app/controllers/reviews_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/reviews_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/reviews/" for 10.0.2.2 at 2018-09-19 13:26:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 2.8ms)
+
+
+  
+SyntaxError (/vagrant/KADAI/app/views/reviews/index.html.erb:51: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/reviews/index.html.erb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/reviews/" for 10.0.2.2 at 2018-09-19 13:27:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 421ms (Views: 403.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reviews/24/edit" for 10.0.2.2 at 2018-09-19 13:27:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:12
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 104ms (Views: 85.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reviews/24" for 10.0.2.2 at 2018-09-19 13:27:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:8
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered reviews/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 104ms (Views: 85.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/reviews/23/edit" for 10.0.2.2 at 2018-09-19 13:27:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mReview Load (1.9ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:12
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 115ms (Views: 92.1ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/reviews/23" for 10.0.2.2 at 2018-09-19 13:27:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QjKvjkDR4imRhIwCR90qIXRTXciJ6BvuFMWRT+IHESRG30Y04g7FcZhWU8UE7K8rGPyhBPolGQdACUB6ExXrNQ==", "review"=>{"title"=>"b", "body"=>""}, "commit"=>"Update Book", "id"=>"23"}
+  [1m[36mReview Load (1.9ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 132ms (Views: 93.4ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/reviews/23" for 10.0.2.2 at 2018-09-19 13:27:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DzP06N422gsl0q3Au0tNrtTHKyb7tBtx2IVXzWbpBTIAVt3uxpawk7QtD7B35BMz4Z1+XSNkA+4YFqESOEgnGQ==", "review"=>{"title"=>"b", "body"=>""}, "commit"=>"Update Book", "id"=>"23"}
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 106ms (Views: 98.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/reviews" for 10.0.2.2 at 2018-09-19 13:28:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 107ms (Views: 89.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:28:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S9jEs4t54PCigCwkOZdxWpYhi2P5QOLJKsuzqa1zgeok1f7/ipCwIi4YaecFAy0IKF/I3APF2ZRMLxVEYvj64A==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:       <th></th>
+    18:     </tr>
+    19: 
+    20:     <% @reviews.each do |review| %>
+    21:         <tr>
+    22:         <td> <%= review.title %> </td>
+    23:         <td> <%= review.body %> </td>
+  
+app/views/reviews/index.html.erb:20:in `_app_views_reviews_index_html_erb___1519340126566424836_47282455382200'
+app/controllers/reviews_controller.rb:36:in `create'
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:35:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S9jEs4t54PCigCwkOZdxWpYhi2P5QOLJKsuzqa1zgeok1f7/ipCwIi4YaecFAy0IKF/I3APF2ZRMLxVEYvj64A==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:       <th></th>
+    18:     </tr>
+    19: 
+    20:     <% @reviews.each do |review| %>
+    21:         <tr>
+    22:         <td> <%= review.title %> </td>
+    23:         <td> <%= review.body %> </td>
+  
+app/views/reviews/index.html.erb:20:in `_app_views_reviews_index_html_erb___1519340126566424836_70079270334100'
+app/controllers/reviews_controller.rb:36:in `create'
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:36:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S9jEs4t54PCigCwkOZdxWpYhi2P5QOLJKsuzqa1zgeok1f7/ipCwIi4YaecFAy0IKF/I3APF2ZRMLxVEYvj64A==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 372ms (Views: 345.5ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:36:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2TgoeYRIFg9V+1BBKAmRhIoxGCIdvaiU01XZm3+jy4rWXQF/nOh8l8QE8jHkps8Zv2tNWcVtsAsTxi9EIQLpoQ==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 95ms (Views: 89.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:38:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YKzUMYfTNg1o8tvFKyDpuBMgqosCrF0RrVJ+kamO/Bxvyf03n3NclfkNebXnj7clJnr/8Np8RY5twYhO9y/eNw==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (36.3ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2: 
+    3:   <h1>Books</h1>
+    4: 
+    5:   <%= form_for(@review2) do |f| %>
+    6:     <% if @review2.errors.any? %>
+    7:     <%= @review2.errors.full_messages.each do |f| %>
+    8:       <%= message %>
+  
+app/views/reviews/index.html.erb:5:in `_app_views_reviews_index_html_erb___2616818879361552112_69876500813360'
+app/controllers/reviews_controller.rb:37:in `create'
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:38:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YKzUMYfTNg1o8tvFKyDpuBMgqosCrF0RrVJ+kamO/Bxvyf03n3NclfkNebXnj7clJnr/8Np8RY5twYhO9y/eNw==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 408ms (Views: 375.5ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:38:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I9XNDh4TC9kOcg6o9OWAn6LSN7zwoZnespEcd21YINsssOQIBrNhQZ+NrNg4St4Cl4hixyhxgUFyAuqoM/kC8A==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 108ms (Views: 103.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:38:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nnai3tlm2JWh8D15AuZD9uoOjeQ+gXyqPW972ed+ny05E4vYwcayDTAPnwnOSR1r31TYn+ZRZDX9/I0Gud+9Bg==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 99ms (Views: 93.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reviews" for 10.0.2.2 at 2018-09-19 13:39:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 119ms (Views: 101.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:39:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bAqMvglOZpuWYaU7JXiYhQQCeX5oXEP4hpFN1qJ+2iVjb6W4Ee4MAweeB0vp18YYMVgsBbCMW2dGArsJ/N/4Dg==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  Rendered reviews/index.html.erb within layouts/application (344.1ms)
+Completed 500 Internal Server Error in 393ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `message' for #<#<Class:0x0000564d05205488>:0x0000564d070fe218>):
+     5:   <%= form_for(@review) do |f| %>
+     6:     <% if @review.errors.any? %>
+     7:     <%= @review.errors.full_messages.each do |f| %>
+     8:       <%= message %>
+     9:     <% end %>
+    10:     <% end %>
+    11:   <% end %>
+  
+app/views/reviews/index.html.erb:8:in `block (2 levels) in _app_views_reviews_index_html_erb__2698633085126658091_47444416954020'
+app/views/reviews/index.html.erb:7:in `each'
+app/views/reviews/index.html.erb:7:in `block in _app_views_reviews_index_html_erb__2698633085126658091_47444416954020'
+app/views/reviews/index.html.erb:5:in `_app_views_reviews_index_html_erb__2698633085126658091_47444416954020'
+app/controllers/reviews_controller.rb:37:in `create'
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:41:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bAqMvglOZpuWYaU7JXiYhQQCeX5oXEP4hpFN1qJ+2iVjb6W4Ee4MAweeB0vp18YYMVgsBbCMW2dGArsJ/N/4Dg==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 128ms (Views: 122.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:42:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DEgDWDKMNtgJuZ1lm1RfjDhuzLAKyAQKRBx0jfvTDy0DLSpeKixcQJhGPxVX+wERDTSZy9IYHJWEj4JSpXItBg==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:20
+  Rendered reviews/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 116ms (Views: 107.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/reviews" for 10.0.2.2 at 2018-09-19 13:42:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:22
+  Rendered reviews/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 131ms (Views: 116.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/reviews" for 10.0.2.2 at 2018-09-19 13:45:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NDYHSPGTeoqOjOh3yT1fz/93Vz2bBTRNM+vtM8DNXRQ7Uy5O6TMQEh9zSgcFkgFSyi0CRkPVLNLzeBvsnmx/Pw==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:32
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:22
+  Rendered reviews/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 982ms (Views: 977.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/reviews/14/edit" for 10.0.2.2 at 2018-09-19 13:45:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:12
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 125ms (Views: 89.0ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/reviews/14" for 10.0.2.2 at 2018-09-19 13:46:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R0t4Q5jv9cTBUWJBOUvMfhv/9gZ3fqvWKtcVAV53kXEjPCzhZR497YFoixyRbJMb4VN1GA/YxOKTCboG/Vi4MQ==", "review"=>{"title"=>"", "body"=>""}, "commit"=>"Update Book", "id"=>"14"}
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 137ms (Views: 130.3ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/reviews/14" for 10.0.2.2 at 2018-09-19 13:46:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3u+ClfsNhOlpjauiH9hgUAt+ZpElDNe+z6wCvFTE4knRiquT463ucfhyCdLTdz7NPiQz6v3czyEPP/RjCmXAYg==", "review"=>{"title"=>"リーダブルコード", "body"=>""}, "commit"=>"Update Book", "id"=>"14"}
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 100ms (Views: 90.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/reviews/14" for 10.0.2.2 at 2018-09-19 13:46:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:8
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered reviews/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 124ms (Views: 100.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/reviews" for 10.0.2.2 at 2018-09-19 13:47:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:22
+  Rendered reviews/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 105ms (Views: 85.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reviews/17/edit" for 10.0.2.2 at 2018-09-19 13:47:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mReview Load (1.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:12
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered reviews/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 115ms (Views: 91.6ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/reviews/17" for 10.0.2.2 at 2018-09-19 13:47:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eza4e7YlL+iomFfFuBx39NuIF0WYOzwXoOuk9totflLb/AJisDhESDReJS86+UR1nMBzYEbB8JEAvYBNpWmBqw==", "review"=>{"title"=>"入門Gi", "body"=>"gitについての基本操作から内部構造まで解説してくれま"}, "commit"=>"Update Book", "id"=>"17"}
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+  [1m[36mReview Update (3.8ms)[0m  [1m[33mUPDATE "reviews" SET "title" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["title", "入門Gi"], ["updated_at", "2018-09-19 13:47:08.717905"], ["id", 17]]
+  ↳ app/controllers/reviews_controller.rb:17
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17
+Redirected to http://localhost:3000/reviews/17
+Completed 302 Found in 17ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/reviews/17" for 10.0.2.2 at 2018-09-19 13:47:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:8
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered reviews/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 118ms (Views: 97.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reviews" for 10.0.2.2 at 2018-09-19 13:47:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:22
+  Rendered reviews/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 114ms (Views: 98.1ms | ActiveRecord: 1.4ms)
+
+

@@ -83,3 +83,7 @@ td {
 }
 .column {
 	margin-bottom: 30px
+}
+.error {
+	margin: 20px auto;
+}

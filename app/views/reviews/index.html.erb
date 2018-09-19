@@ -1,6 +1,17 @@
 <body>
 
   <h1>Books</h1>
+
+  <%= form_for(@review) do |f| %>
+    <% if @review.errors.any? %>
+      <div class="error">
+        <% @review.errors.full_messages.each do |message| %>
+          <p><%= message %></p>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+
   <table class="clearfix">
     <tr class="column">
       <th>Title</th>
